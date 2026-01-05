@@ -6,16 +6,11 @@ const reportSchema = new mongoose.Schema({
         ref: 'Url',
         required: true
     },
-    // 🔥 الحقل الجديد: ربط التقرير باليوزر مباشرة
-    user: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User',
-        required: true
-    },
     scanDate: {
         type: Date,
         default: Date.now
     },
+    // ملخص سريع للتقرير
     summary: {
         totalVulnerabilities: { type: Number, default: 0 },
         highestSeverity: { 
@@ -24,18 +19,21 @@ const reportSchema = new mongoose.Schema({
             default: 'safe'
         }
     },
+    // مصفوفة تحتوي على تفاصيل كل ثغرة تم فحصها
     details: [
         {
             vulnerabilityId: { type: mongoose.Schema.Types.ObjectId, ref: 'Vulnerability' },
-            vulnerabilityName: String,
+            vulnerabilityName: String, // تخزين الاسم لتسهيل العرض
             severity: String,
-            isDetected: Boolean,
-            technicalDetail: Object
+            isDetected: Boolean, // هل الثغرة موجودة أم لا
+            technicalDetail: Object // هنا نخزن مخرجات البايثون (اختياري)
         }
     ],
+
+    
     aiReportContent: String,
     pdfFilename: String
-    
 }, { timestamps: true });
+
 
 module.exports = mongoose.model('Report', reportSchema);
