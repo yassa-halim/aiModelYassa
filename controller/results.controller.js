@@ -9,9 +9,20 @@ const sendEmail = require('../utils/email.utils');
 const Url = require("../model/url.model");
 const Report = require("../model/results.model"); 
 const Vulnerability = require("../model/vulnerability.model");
+
+
+
+
+
+//yassa
 const { prepareDataForAI } = require("../aiModel/src/utils/ai-cleaner.utils");
 const { generateReportContent } = require("../aiModel/src/utils/ollama.service");
 const { generateAndSavePDF } = require("../aiModel/src/services/pdf.service");
+
+
+
+
+
 
 // --- 1. إعداد المسارات ---
 const SCRIPTS_DIR = path.join(__dirname, "../vulnerabilityFiles");
@@ -193,6 +204,39 @@ exports.scanAll = async (req, res) => {
       }
     });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // --- AI Integration Start ---
     let aiMarkdownContent = "";
     try {
@@ -209,8 +253,14 @@ exports.scanAll = async (req, res) => {
     }
     // --- AI Integration End ---
 
+
+
+
+
+
     // حفظ التقرير
     const newReport = new Report({
+
         url: urlDoc._id,
         summary: {
             totalVulnerabilities: detectedCount,
@@ -234,6 +284,10 @@ exports.scanAll = async (req, res) => {
       if(logger && logger.error) logger.error(`❌ PDF Service Error: ${pdfError.message}`);
     }
     // --- PDF Generation End ---
+
+
+
+
 
     // تحديث الرابط
     urlDoc.status = 'Finished';
@@ -306,6 +360,14 @@ exports.scanAll = async (req, res) => {
 };
 
 // --- دوال الجلب الإضافية ---
+
+
+
+
+
+
+
+
 
 exports.getAllReports = async (req, res) => {
   try {

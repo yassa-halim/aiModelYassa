@@ -51,9 +51,11 @@ exports.prepareDataForAI = (scanDetails) => {
 
             return {
                 id: `V-${String(index + 1).padStart(3, "0")}`,
-                title: vuln.vulnerabilityName || "Unspecified Security Finding",
-                severity: vuln.severity || "Low",
-                evidence: structuredEvidence // نرسل البيانات المنظمة (Clean Data)
+                title: vuln.vulnerabilityName, // ده "المفتاح" اللي الـ AI هيستخدمه عشان يشرح الثغرة
+                severity: vuln.severity,
+                evidence: structuredEvidence,
+                // ضيف ده عشان يساعد الموديل يفهم السياق أكتر
+                context: `Detected ${vuln.vulnerabilityName} during automated scanning.`
             };
         });
 };
