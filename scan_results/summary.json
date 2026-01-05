@@ -1,0 +1,3458 @@
+{
+  "task_id": "scan-6924bc5348d8f44f57dec60e",
+  "base_url": "http://testphp.vulnweb.com/search.php",
+  "collected_endpoints": [
+    "http://testphp.vulnweb.com/search.php",
+    "http://testphp.vulnweb.com/AJAX/index.php",
+    "http://testphp.vulnweb.com/artists.php",
+    "http://testphp.vulnweb.com/cart.php",
+    "http://testphp.vulnweb.com/categories.php",
+    "http://testphp.vulnweb.com/disclaimer.php",
+    "http://testphp.vulnweb.com/guestbook.php",
+    "http://testphp.vulnweb.com/index.php",
+    "http://testphp.vulnweb.com/login.php",
+    "http://testphp.vulnweb.com/privacy.php",
+    "http://testphp.vulnweb.com/userinfo.php"
+  ],
+  "scan_time": 1767371168.4687512,
+  "results_count": 220,
+  "findings_count": 8,
+  "findings": [
+    {
+      "type": "sqli_error_suspected",
+      "detail": {
+        "url": "http://testphp.vulnweb.com/search.php",
+        "params": [
+          "searchFor"
+        ],
+        "method": "POST",
+        "payload": null,
+        "payload_hash": "ef201c74",
+        "status": 200,
+        "size": 2231,
+        "time_s": 0.472,
+        "error_signatures": [
+          "SQL syntax",
+          "You have an error in your SQL syntax",
+          "MySQL"
+        ],
+        "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371063.html"
+      }
+    },
+    {
+      "type": "sqli_union_suspected",
+      "detail": {
+        "url": "http://testphp.vulnweb.com/search.php",
+        "params": [
+          "searchFor"
+        ],
+        "method": "POST",
+        "payload": null,
+        "payload_hash": "bcbace8b",
+        "status": 200,
+        "size": 2326,
+        "time_s": 0.471,
+        "error_signatures": [
+          "SQL syntax",
+          "You have an error in your SQL syntax",
+          "MySQL"
+        ],
+        "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371063.html"
+      }
+    },
+    {
+      "type": "sqli_error_suspected",
+      "detail": {
+        "url": "http://testphp.vulnweb.com/categories.php",
+        "params": [
+          "message"
+        ],
+        "method": "POST",
+        "payload": null,
+        "payload_hash": "ef201c74",
+        "status": 200,
+        "size": 170,
+        "time_s": 0.47,
+        "error_signatures": [
+          "Warning: mysql",
+          "MySQL"
+        ],
+        "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_379058a4_1767371103.html"
+      }
+    },
+    {
+      "type": "sqli_union_suspected",
+      "detail": {
+        "url": "http://testphp.vulnweb.com/categories.php",
+        "params": [
+          "message"
+        ],
+        "method": "POST",
+        "payload": null,
+        "payload_hash": "bcbace8b",
+        "status": 200,
+        "size": 170,
+        "time_s": 0.472,
+        "error_signatures": [
+          "Warning: mysql",
+          "MySQL"
+        ],
+        "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_379058a4_1767371104.html"
+      }
+    },
+    {
+      "type": "sqli_boolean",
+      "detail": {
+        "true": {
+          "url": "http://testphp.vulnweb.com/userinfo.php",
+          "params": [
+            "uname",
+            "pass"
+          ],
+          "method": "POST",
+          "payload": null,
+          "payload_hash": "484b29d9",
+          "status": 200,
+          "size": 5966,
+          "time_s": 0.466,
+          "error_signatures": [],
+          "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_88336e53_1767371157.html"
+        },
+        "false": {
+          "url": "http://testphp.vulnweb.com/userinfo.php",
+          "params": [
+            "uname",
+            "pass"
+          ],
+          "method": "POST",
+          "payload": null,
+          "payload_hash": "1072a64d",
+          "status": 200,
+          "size": 5597,
+          "time_s": 0.678,
+          "error_signatures": [],
+          "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_88336e53_1767371157.html"
+        },
+        "diff_ratio": 0.0,
+        "size_diff": 369,
+        "confidence": 0.6
+      }
+    },
+    {
+      "type": "sqli_error_suspected",
+      "detail": {
+        "url": "http://testphp.vulnweb.com/userinfo.php",
+        "params": [
+          "username",
+          "password"
+        ],
+        "method": "POST",
+        "payload": null,
+        "payload_hash": "ef201c74",
+        "status": 200,
+        "size": 170,
+        "time_s": 0.463,
+        "error_signatures": [
+          "Warning: mysql",
+          "MySQL"
+        ],
+        "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_88336e53_1767371162.html"
+      }
+    },
+    {
+      "type": "sqli_union_suspected",
+      "detail": {
+        "url": "http://testphp.vulnweb.com/userinfo.php",
+        "params": [
+          "username",
+          "password"
+        ],
+        "method": "POST",
+        "payload": null,
+        "payload_hash": "bcbace8b",
+        "status": 200,
+        "size": 170,
+        "time_s": 0.462,
+        "error_signatures": [
+          "Warning: mysql",
+          "MySQL"
+        ],
+        "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_88336e53_1767371163.html"
+      }
+    },
+    {
+      "type": "sqli_error_suspected",
+      "detail": {
+        "url": "http://testphp.vulnweb.com/userinfo.php",
+        "params": [
+          "searchFor"
+        ],
+        "method": "POST",
+        "payload": null,
+        "payload_hash": "ef201c74",
+        "status": 200,
+        "size": 170,
+        "time_s": 0.463,
+        "error_signatures": [
+          "Warning: mysql",
+          "MySQL"
+        ],
+        "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_88336e53_1767371165.html"
+      }
+    }
+  ],
+  "results": [
+    {
+      "url": "http://testphp.vulnweb.com/search.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 4732,
+      "time_s": 0.47,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371057.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/search.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 4732,
+      "time_s": 0.472,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371057.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/search.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 4732,
+      "time_s": 0.472,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371058.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/search.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 4732,
+      "time_s": 0.472,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371058.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/search.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 4732,
+      "time_s": 0.47,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371059.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/search.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 4732,
+      "time_s": 0.471,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371059.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/search.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 4732,
+      "time_s": 0.471,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371060.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/search.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 4732,
+      "time_s": 0.471,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371060.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/search.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 4732,
+      "time_s": 0.471,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371061.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/search.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 4732,
+      "time_s": 0.471,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371061.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/search.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 2230,
+      "time_s": 0.471,
+      "error_signatures": [
+        "SQL syntax",
+        "You have an error in your SQL syntax",
+        "MySQL"
+      ],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371062.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/search.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 2231,
+      "time_s": 0.47,
+      "error_signatures": [
+        "SQL syntax",
+        "You have an error in your SQL syntax",
+        "MySQL"
+      ],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371062.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/search.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 2231,
+      "time_s": 0.472,
+      "error_signatures": [
+        "SQL syntax",
+        "You have an error in your SQL syntax",
+        "MySQL"
+      ],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371063.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/search.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 2326,
+      "time_s": 0.471,
+      "error_signatures": [
+        "SQL syntax",
+        "You have an error in your SQL syntax",
+        "MySQL"
+      ],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371063.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/search.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 2241,
+      "time_s": 0.47,
+      "error_signatures": [
+        "SQL syntax",
+        "You have an error in your SQL syntax",
+        "MySQL"
+      ],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371064.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/search.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 4732,
+      "time_s": 0.471,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371064.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/search.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 4732,
+      "time_s": 0.471,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371065.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/search.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 4732,
+      "time_s": 0.471,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371065.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/search.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 4732,
+      "time_s": 0.47,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371065.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/search.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 4732,
+      "time_s": 0.471,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371066.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/AJAX/index.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 4236,
+      "time_s": 0.471,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_d67d60ec_1767371066.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/AJAX/index.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 4236,
+      "time_s": 0.47,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_d67d60ec_1767371067.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/AJAX/index.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 4236,
+      "time_s": 0.471,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_d67d60ec_1767371067.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/AJAX/index.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 4236,
+      "time_s": 0.469,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_d67d60ec_1767371068.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/AJAX/index.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 4236,
+      "time_s": 0.471,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_d67d60ec_1767371068.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/AJAX/index.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 4236,
+      "time_s": 0.47,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_d67d60ec_1767371069.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/AJAX/index.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 4236,
+      "time_s": 0.47,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_d67d60ec_1767371069.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/AJAX/index.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 4236,
+      "time_s": 0.47,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_d67d60ec_1767371070.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/AJAX/index.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 4236,
+      "time_s": 0.472,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_d67d60ec_1767371070.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/AJAX/index.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 4236,
+      "time_s": 0.469,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_d67d60ec_1767371071.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/AJAX/index.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 4236,
+      "time_s": 0.47,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_d67d60ec_1767371071.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/AJAX/index.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 4236,
+      "time_s": 0.47,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_d67d60ec_1767371072.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/AJAX/index.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 4236,
+      "time_s": 0.47,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_d67d60ec_1767371072.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/AJAX/index.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 4236,
+      "time_s": 0.494,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_d67d60ec_1767371073.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/AJAX/index.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 4236,
+      "time_s": 0.495,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_d67d60ec_1767371073.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/AJAX/index.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 4236,
+      "time_s": 0.47,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_d67d60ec_1767371074.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/AJAX/index.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 4236,
+      "time_s": 0.47,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_d67d60ec_1767371074.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/AJAX/index.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 4236,
+      "time_s": 0.471,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_d67d60ec_1767371075.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/AJAX/index.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 4236,
+      "time_s": 0.484,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_d67d60ec_1767371075.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/AJAX/index.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 4236,
+      "time_s": 0.47,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_d67d60ec_1767371076.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/artists.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 5328,
+      "time_s": 0.471,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_76d40c2e_1767371076.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/artists.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 5328,
+      "time_s": 0.472,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_76d40c2e_1767371076.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/artists.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 5328,
+      "time_s": 0.472,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_76d40c2e_1767371077.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/artists.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 5328,
+      "time_s": 0.471,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_76d40c2e_1767371077.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/artists.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 5328,
+      "time_s": 0.471,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_76d40c2e_1767371078.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/artists.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 5328,
+      "time_s": 0.472,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_76d40c2e_1767371078.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/artists.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 5328,
+      "time_s": 0.472,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_76d40c2e_1767371079.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/artists.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 5328,
+      "time_s": 0.479,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_76d40c2e_1767371079.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/artists.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 5328,
+      "time_s": 0.487,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_76d40c2e_1767371080.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/artists.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 5328,
+      "time_s": 0.471,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_76d40c2e_1767371080.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/artists.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 5328,
+      "time_s": 0.486,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_76d40c2e_1767371081.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/artists.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 5328,
+      "time_s": 0.471,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_76d40c2e_1767371081.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/artists.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 5328,
+      "time_s": 0.515,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_76d40c2e_1767371082.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/artists.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 5328,
+      "time_s": 0.471,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_76d40c2e_1767371082.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/artists.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 5328,
+      "time_s": 0.472,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_76d40c2e_1767371083.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/artists.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 5328,
+      "time_s": 0.472,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_76d40c2e_1767371083.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/artists.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 5328,
+      "time_s": 0.473,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_76d40c2e_1767371084.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/artists.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 5328,
+      "time_s": 0.472,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_76d40c2e_1767371084.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/artists.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 5328,
+      "time_s": 0.472,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_76d40c2e_1767371085.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/artists.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 5328,
+      "time_s": 0.472,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_76d40c2e_1767371085.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/cart.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 4903,
+      "time_s": 0.471,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_60953b37_1767371086.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/cart.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 4903,
+      "time_s": 0.471,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_60953b37_1767371086.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/cart.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 4903,
+      "time_s": 0.47,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_60953b37_1767371087.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/cart.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 4903,
+      "time_s": 0.472,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_60953b37_1767371087.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/cart.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 4903,
+      "time_s": 0.47,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_60953b37_1767371087.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/cart.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 4903,
+      "time_s": 0.472,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_60953b37_1767371088.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/cart.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 4903,
+      "time_s": 0.47,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_60953b37_1767371088.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/cart.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 4903,
+      "time_s": 0.471,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_60953b37_1767371089.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/cart.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 4903,
+      "time_s": 0.47,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_60953b37_1767371089.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/cart.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 4903,
+      "time_s": 0.471,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_60953b37_1767371090.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/cart.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 4903,
+      "time_s": 0.47,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_60953b37_1767371090.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/cart.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 4903,
+      "time_s": 0.47,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_60953b37_1767371091.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/cart.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 4903,
+      "time_s": 0.47,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_60953b37_1767371091.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/cart.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 4903,
+      "time_s": 0.47,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_60953b37_1767371092.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/cart.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 4903,
+      "time_s": 0.471,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_60953b37_1767371092.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/cart.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 4903,
+      "time_s": 0.471,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_60953b37_1767371093.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/cart.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 4903,
+      "time_s": 0.471,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_60953b37_1767371093.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/cart.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 4903,
+      "time_s": 0.47,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_60953b37_1767371094.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/cart.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 4903,
+      "time_s": 0.472,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_60953b37_1767371094.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/cart.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 4903,
+      "time_s": 0.483,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_60953b37_1767371095.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/categories.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 6115,
+      "time_s": 0.47,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_379058a4_1767371095.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/categories.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 6115,
+      "time_s": 0.471,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_379058a4_1767371096.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/categories.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 6115,
+      "time_s": 0.471,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_379058a4_1767371096.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/categories.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 6115,
+      "time_s": 0.473,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_379058a4_1767371097.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/categories.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 6115,
+      "time_s": 0.472,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_379058a4_1767371097.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/categories.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 6115,
+      "time_s": 0.471,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_379058a4_1767371098.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/categories.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 6115,
+      "time_s": 0.47,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_379058a4_1767371098.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/categories.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 6115,
+      "time_s": 0.473,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_379058a4_1767371098.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/categories.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 6115,
+      "time_s": 0.47,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_379058a4_1767371099.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/categories.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 6115,
+      "time_s": 0.471,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_379058a4_1767371099.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/categories.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 6115,
+      "time_s": 0.472,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_379058a4_1767371100.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/categories.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 6115,
+      "time_s": 0.47,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_379058a4_1767371100.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/categories.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 6115,
+      "time_s": 0.471,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_379058a4_1767371101.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/categories.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 6115,
+      "time_s": 0.471,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_379058a4_1767371101.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/categories.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 170,
+      "time_s": 0.469,
+      "error_signatures": [
+        "Warning: mysql",
+        "MySQL"
+      ],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_379058a4_1767371102.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/categories.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 170,
+      "time_s": 0.47,
+      "error_signatures": [
+        "Warning: mysql",
+        "MySQL"
+      ],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_379058a4_1767371102.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/categories.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 170,
+      "time_s": 0.47,
+      "error_signatures": [
+        "Warning: mysql",
+        "MySQL"
+      ],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_379058a4_1767371103.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/categories.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 170,
+      "time_s": 0.47,
+      "error_signatures": [
+        "Warning: mysql",
+        "MySQL"
+      ],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_379058a4_1767371103.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/categories.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 170,
+      "time_s": 0.472,
+      "error_signatures": [
+        "Warning: mysql",
+        "MySQL"
+      ],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_379058a4_1767371104.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/categories.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 6115,
+      "time_s": 0.702,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_379058a4_1767371104.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/disclaimer.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 5524,
+      "time_s": 0.464,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_51685efd_1767371105.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/disclaimer.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 5524,
+      "time_s": 0.462,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_51685efd_1767371105.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/disclaimer.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 5524,
+      "time_s": 0.463,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_51685efd_1767371106.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/disclaimer.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 5524,
+      "time_s": 0.464,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_51685efd_1767371106.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/disclaimer.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 5524,
+      "time_s": 0.467,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_51685efd_1767371107.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/disclaimer.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 5524,
+      "time_s": 0.463,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_51685efd_1767371107.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/disclaimer.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 5524,
+      "time_s": 0.463,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_51685efd_1767371108.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/disclaimer.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 5524,
+      "time_s": 0.463,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_51685efd_1767371108.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/disclaimer.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 5524,
+      "time_s": 0.464,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_51685efd_1767371109.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/disclaimer.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 5524,
+      "time_s": 0.463,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_51685efd_1767371109.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/disclaimer.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 5524,
+      "time_s": 0.464,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_51685efd_1767371110.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/disclaimer.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 5524,
+      "time_s": 0.463,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_51685efd_1767371110.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/disclaimer.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 5524,
+      "time_s": 0.462,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_51685efd_1767371110.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/disclaimer.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 5524,
+      "time_s": 0.464,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_51685efd_1767371111.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/disclaimer.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 5524,
+      "time_s": 0.463,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_51685efd_1767371111.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/disclaimer.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 5524,
+      "time_s": 0.464,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_51685efd_1767371112.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/disclaimer.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 5524,
+      "time_s": 0.463,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_51685efd_1767371112.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/disclaimer.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 5524,
+      "time_s": 0.463,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_51685efd_1767371113.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/disclaimer.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 5524,
+      "time_s": 0.462,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_51685efd_1767371113.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/disclaimer.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 5524,
+      "time_s": 0.464,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_51685efd_1767371114.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/guestbook.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 5390,
+      "time_s": 0.464,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a529c798_1767371114.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/guestbook.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 5390,
+      "time_s": 0.463,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a529c798_1767371115.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/guestbook.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 5390,
+      "time_s": 0.463,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a529c798_1767371115.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/guestbook.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 5390,
+      "time_s": 0.462,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a529c798_1767371116.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/guestbook.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 5390,
+      "time_s": 0.464,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a529c798_1767371116.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/guestbook.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 5390,
+      "time_s": 0.463,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a529c798_1767371117.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/guestbook.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 5390,
+      "time_s": 0.463,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a529c798_1767371117.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/guestbook.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 5390,
+      "time_s": 0.464,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a529c798_1767371118.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/guestbook.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 5390,
+      "time_s": 0.462,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a529c798_1767371118.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/guestbook.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 5390,
+      "time_s": 0.463,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a529c798_1767371119.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/guestbook.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 5390,
+      "time_s": 0.464,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a529c798_1767371119.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/guestbook.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 5390,
+      "time_s": 0.464,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a529c798_1767371120.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/guestbook.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 5390,
+      "time_s": 0.466,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a529c798_1767371120.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/guestbook.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 5390,
+      "time_s": 0.465,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a529c798_1767371120.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/guestbook.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 5390,
+      "time_s": 0.493,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a529c798_1767371121.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/guestbook.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 5390,
+      "time_s": 0.467,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a529c798_1767371121.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/guestbook.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 5390,
+      "time_s": 0.463,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a529c798_1767371122.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/guestbook.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 5390,
+      "time_s": 0.463,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a529c798_1767371122.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/guestbook.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 5390,
+      "time_s": 0.462,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a529c798_1767371123.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/guestbook.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 5390,
+      "time_s": 1.129,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a529c798_1767371124.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/index.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 4958,
+      "time_s": 0.469,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_94fcba4f_1767371124.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/index.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 4958,
+      "time_s": 1.114,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_94fcba4f_1767371126.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/index.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 4958,
+      "time_s": 0.465,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_94fcba4f_1767371126.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/index.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 4958,
+      "time_s": 1.126,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_94fcba4f_1767371127.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/index.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 4958,
+      "time_s": 1.629,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_94fcba4f_1767371129.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/index.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 4958,
+      "time_s": 0.751,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_94fcba4f_1767371130.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/index.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 4958,
+      "time_s": 1.173,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_94fcba4f_1767371131.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/index.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 4958,
+      "time_s": 0.75,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_94fcba4f_1767371131.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/index.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 4958,
+      "time_s": 0.465,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_94fcba4f_1767371132.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/index.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 4958,
+      "time_s": 0.463,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_94fcba4f_1767371132.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/index.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 4958,
+      "time_s": 0.463,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_94fcba4f_1767371133.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/index.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 4958,
+      "time_s": 0.464,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_94fcba4f_1767371133.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/index.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 4958,
+      "time_s": 0.465,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_94fcba4f_1767371134.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/index.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 4958,
+      "time_s": 0.464,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_94fcba4f_1767371134.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/index.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 4958,
+      "time_s": 0.464,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_94fcba4f_1767371135.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/index.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 4958,
+      "time_s": 0.463,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_94fcba4f_1767371135.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/index.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 4958,
+      "time_s": 0.464,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_94fcba4f_1767371136.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/index.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 4958,
+      "time_s": 0.464,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_94fcba4f_1767371136.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/index.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 4958,
+      "time_s": 0.463,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_94fcba4f_1767371137.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/index.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 4958,
+      "time_s": 0.465,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_94fcba4f_1767371137.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/login.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 5523,
+      "time_s": 0.464,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_1e9c613a_1767371138.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/login.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 5523,
+      "time_s": 0.464,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_1e9c613a_1767371138.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/login.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 5523,
+      "time_s": 0.464,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_1e9c613a_1767371139.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/login.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 5523,
+      "time_s": 0.463,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_1e9c613a_1767371139.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/login.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 5523,
+      "time_s": 0.465,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_1e9c613a_1767371139.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/login.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 5523,
+      "time_s": 0.465,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_1e9c613a_1767371140.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/login.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 5523,
+      "time_s": 0.464,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_1e9c613a_1767371140.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/login.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 5523,
+      "time_s": 0.469,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_1e9c613a_1767371141.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/login.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 5523,
+      "time_s": 0.464,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_1e9c613a_1767371141.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/login.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 5523,
+      "time_s": 0.465,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_1e9c613a_1767371142.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/login.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 5523,
+      "time_s": 0.467,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_1e9c613a_1767371142.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/login.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 5523,
+      "time_s": 0.47,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_1e9c613a_1767371143.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/login.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 5523,
+      "time_s": 0.466,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_1e9c613a_1767371143.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/login.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 5523,
+      "time_s": 0.467,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_1e9c613a_1767371144.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/login.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 5523,
+      "time_s": 0.464,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_1e9c613a_1767371144.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/login.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 5523,
+      "time_s": 0.464,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_1e9c613a_1767371145.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/login.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 5523,
+      "time_s": 0.463,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_1e9c613a_1767371145.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/login.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 5523,
+      "time_s": 0.465,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_1e9c613a_1767371146.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/login.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 5523,
+      "time_s": 0.467,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_1e9c613a_1767371146.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/login.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 5523,
+      "time_s": 0.465,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_1e9c613a_1767371147.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/privacy.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 404,
+      "size": 16,
+      "time_s": 0.463,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_ae795fe3_1767371147.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/privacy.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 404,
+      "size": 16,
+      "time_s": 0.462,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_ae795fe3_1767371147.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/privacy.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 404,
+      "size": 16,
+      "time_s": 0.463,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_ae795fe3_1767371148.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/privacy.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 404,
+      "size": 16,
+      "time_s": 0.463,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_ae795fe3_1767371148.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/privacy.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 404,
+      "size": 16,
+      "time_s": 0.463,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_ae795fe3_1767371149.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/privacy.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 404,
+      "size": 16,
+      "time_s": 0.466,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_ae795fe3_1767371149.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/privacy.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 404,
+      "size": 16,
+      "time_s": 0.47,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_ae795fe3_1767371150.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/privacy.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 404,
+      "size": 16,
+      "time_s": 0.464,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_ae795fe3_1767371150.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/privacy.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 404,
+      "size": 16,
+      "time_s": 0.462,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_ae795fe3_1767371151.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/privacy.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 404,
+      "size": 16,
+      "time_s": 0.463,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_ae795fe3_1767371151.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/privacy.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 404,
+      "size": 16,
+      "time_s": 0.462,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_ae795fe3_1767371152.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/privacy.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 404,
+      "size": 16,
+      "time_s": 0.463,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_ae795fe3_1767371152.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/privacy.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 404,
+      "size": 16,
+      "time_s": 0.463,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_ae795fe3_1767371153.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/privacy.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 404,
+      "size": 16,
+      "time_s": 0.462,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_ae795fe3_1767371153.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/privacy.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 404,
+      "size": 16,
+      "time_s": 0.463,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_ae795fe3_1767371154.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/privacy.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 404,
+      "size": 16,
+      "time_s": 0.463,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_ae795fe3_1767371154.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/privacy.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 404,
+      "size": 16,
+      "time_s": 0.463,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_ae795fe3_1767371154.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/privacy.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 404,
+      "size": 16,
+      "time_s": 0.462,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_ae795fe3_1767371155.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/privacy.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 404,
+      "size": 16,
+      "time_s": 0.461,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_ae795fe3_1767371155.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/privacy.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 404,
+      "size": 16,
+      "time_s": 0.697,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_ae795fe3_1767371156.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/userinfo.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 5966,
+      "time_s": 0.466,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_88336e53_1767371157.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/userinfo.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 5597,
+      "time_s": 0.678,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_88336e53_1767371157.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/userinfo.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 5597,
+      "time_s": 0.675,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_88336e53_1767371158.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/userinfo.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 68,
+      "time_s": 0.464,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_88336e53_1767371158.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/userinfo.php",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 123,
+      "time_s": 2.415,
+      "error_signatures": [
+        "Warning: mysql",
+        "MySQL"
+      ],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_88336e53_1767371161.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/userinfo.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 170,
+      "time_s": 0.463,
+      "error_signatures": [
+        "Warning: mysql",
+        "MySQL"
+      ],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_88336e53_1767371161.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/userinfo.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 170,
+      "time_s": 0.464,
+      "error_signatures": [
+        "Warning: mysql",
+        "MySQL"
+      ],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_88336e53_1767371162.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/userinfo.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 170,
+      "time_s": 0.463,
+      "error_signatures": [
+        "Warning: mysql",
+        "MySQL"
+      ],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_88336e53_1767371162.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/userinfo.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 170,
+      "time_s": 0.462,
+      "error_signatures": [
+        "Warning: mysql",
+        "MySQL"
+      ],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_88336e53_1767371163.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/userinfo.php",
+      "params": [
+        "username",
+        "password"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 170,
+      "time_s": 0.462,
+      "error_signatures": [
+        "Warning: mysql",
+        "MySQL"
+      ],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_88336e53_1767371163.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/userinfo.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 170,
+      "time_s": 0.464,
+      "error_signatures": [
+        "Warning: mysql",
+        "MySQL"
+      ],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_88336e53_1767371164.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/userinfo.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 170,
+      "time_s": 0.462,
+      "error_signatures": [
+        "Warning: mysql",
+        "MySQL"
+      ],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_88336e53_1767371164.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/userinfo.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 170,
+      "time_s": 0.463,
+      "error_signatures": [
+        "Warning: mysql",
+        "MySQL"
+      ],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_88336e53_1767371165.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/userinfo.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 6004,
+      "time_s": 0.466,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_88336e53_1767371165.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/userinfo.php",
+      "params": [
+        "searchFor"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 6004,
+      "time_s": 0.487,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_88336e53_1767371166.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/userinfo.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "484b29d9",
+      "status": 200,
+      "size": 6004,
+      "time_s": 0.465,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_88336e53_1767371166.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/userinfo.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "1072a64d",
+      "status": 200,
+      "size": 6004,
+      "time_s": 0.464,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_88336e53_1767371167.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/userinfo.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "ef201c74",
+      "status": 200,
+      "size": 6004,
+      "time_s": 0.466,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_88336e53_1767371167.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/userinfo.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "bcbace8b",
+      "status": 200,
+      "size": 6004,
+      "time_s": 0.475,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_88336e53_1767371167.html"
+    },
+    {
+      "url": "http://testphp.vulnweb.com/userinfo.php",
+      "params": [
+        "message"
+      ],
+      "method": "POST",
+      "payload": null,
+      "payload_hash": "c2dc8a88",
+      "status": 200,
+      "size": 6004,
+      "time_s": 0.464,
+      "error_signatures": [],
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_88336e53_1767371168.html"
+    }
+  ]
+}

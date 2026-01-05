@@ -1,0 +1,10 @@
+{
+  "task_id": "scan-6956abe01002fd4d6c0c348d",
+  "target": {
+    "url": "http://testphp.vulnweb.com/search.php"
+  },
+  "base_url": "http://testphp.vulnweb.com/search.php",
+  "options": {
+    "non_destructive": true
+  }
+}

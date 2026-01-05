@@ -1,0 +1,733 @@
+{
+  "task_id": "scan-6924bed625b701cfedde27e0",
+  "base": "http://testphp.vulnweb.com/search.php",
+  "scan_time": 1767371079.5476985,
+  "findings_count": 4,
+  "stats": {
+    "xss_reflected": 4
+  },
+  "findings": [
+    {
+      "id": 1,
+      "type": "xss_reflected",
+      "method": "POST",
+      "param": "searchFor,goButton",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "severity": "medium",
+      "context": "html_tag",
+      "payload_kind": "img_onerror",
+      "evidence_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371070.html"
+    },
+    {
+      "id": 2,
+      "type": "xss_reflected",
+      "method": "POST",
+      "param": "searchFor,goButton",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "severity": "medium",
+      "context": "html_tag",
+      "payload_kind": "svg_onload",
+      "evidence_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371071.html"
+    },
+    {
+      "id": 3,
+      "type": "xss_reflected",
+      "method": "POST",
+      "param": "searchFor,goButton",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "severity": "high",
+      "context": "attribute",
+      "payload_kind": "attr_break_onfocus",
+      "evidence_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371071.html"
+    },
+    {
+      "id": 4,
+      "type": "xss_reflected",
+      "method": "POST",
+      "param": "searchFor,goButton",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "severity": "high",
+      "context": "script",
+      "payload_kind": "script_break",
+      "evidence_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371072.html"
+    }
+  ],
+  "results": [
+    {
+      "type": "reflected_get",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "GET",
+      "param": "id",
+      "payload_kind": "img_onerror",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371057.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_get",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "GET",
+      "param": "id",
+      "payload_kind": "svg_onload",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371057.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_get",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "GET",
+      "param": "id",
+      "payload_kind": "attr_break_onfocus",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371058.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_get",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "GET",
+      "param": "id",
+      "payload_kind": "script_break",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371058.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_get",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "GET",
+      "param": "q",
+      "payload_kind": "img_onerror",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371059.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_get",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "GET",
+      "param": "q",
+      "payload_kind": "svg_onload",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371059.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_get",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "GET",
+      "param": "q",
+      "payload_kind": "attr_break_onfocus",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371059.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_get",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "GET",
+      "param": "q",
+      "payload_kind": "script_break",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371060.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_get",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "GET",
+      "param": "query",
+      "payload_kind": "img_onerror",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371060.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_get",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "GET",
+      "param": "query",
+      "payload_kind": "svg_onload",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371061.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_get",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "GET",
+      "param": "query",
+      "payload_kind": "attr_break_onfocus",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371061.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_get",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "GET",
+      "param": "query",
+      "payload_kind": "script_break",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371061.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_get",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "GET",
+      "param": "s",
+      "payload_kind": "img_onerror",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371062.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_get",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "GET",
+      "param": "s",
+      "payload_kind": "svg_onload",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371062.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_get",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "GET",
+      "param": "s",
+      "payload_kind": "attr_break_onfocus",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371063.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_get",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "GET",
+      "param": "s",
+      "payload_kind": "script_break",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371063.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_get",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "GET",
+      "param": "search",
+      "payload_kind": "img_onerror",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371064.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_get",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "GET",
+      "param": "search",
+      "payload_kind": "svg_onload",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371064.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_get",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "GET",
+      "param": "search",
+      "payload_kind": "attr_break_onfocus",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371064.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_get",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "GET",
+      "param": "search",
+      "payload_kind": "script_break",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371065.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_get",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "GET",
+      "param": "searchFor",
+      "payload_kind": "img_onerror",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371065.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_get",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "GET",
+      "param": "searchFor",
+      "payload_kind": "svg_onload",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371066.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_get",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "GET",
+      "param": "searchFor",
+      "payload_kind": "attr_break_onfocus",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371066.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_get",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "GET",
+      "param": "searchFor",
+      "payload_kind": "script_break",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371067.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_get",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "GET",
+      "param": "term",
+      "payload_kind": "img_onerror",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371067.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_get",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "GET",
+      "param": "term",
+      "payload_kind": "svg_onload",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371067.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_get",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "GET",
+      "param": "term",
+      "payload_kind": "attr_break_onfocus",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371068.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_get",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "GET",
+      "param": "term",
+      "payload_kind": "script_break",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371068.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_get",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "GET",
+      "param": "test",
+      "payload_kind": "img_onerror",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371069.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_get",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "GET",
+      "param": "test",
+      "payload_kind": "svg_onload",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371069.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_get",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "GET",
+      "param": "test",
+      "payload_kind": "attr_break_onfocus",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371069.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_get",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "GET",
+      "param": "test",
+      "payload_kind": "script_break",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371070.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_post",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "POST",
+      "params": [
+        "searchFor",
+        "goButton"
+      ],
+      "payload_kind": "img_onerror",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371070.html",
+      "found_raw": true,
+      "found_escaped": false,
+      "context": "html_tag"
+    },
+    {
+      "type": "reflected_post",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "POST",
+      "params": [
+        "searchFor",
+        "goButton"
+      ],
+      "payload_kind": "svg_onload",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371071.html",
+      "found_raw": true,
+      "found_escaped": false,
+      "context": "html_tag"
+    },
+    {
+      "type": "reflected_post",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "POST",
+      "params": [
+        "searchFor",
+        "goButton"
+      ],
+      "payload_kind": "attr_break_onfocus",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371071.html",
+      "found_raw": true,
+      "found_escaped": false,
+      "context": "attribute"
+    },
+    {
+      "type": "reflected_post",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "POST",
+      "params": [
+        "searchFor",
+        "goButton"
+      ],
+      "payload_kind": "script_break",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371072.html",
+      "found_raw": true,
+      "found_escaped": false,
+      "context": "script"
+    },
+    {
+      "type": "reflected_post",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "POST",
+      "params": [
+        "search"
+      ],
+      "payload_kind": "img_onerror",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371072.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_post",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "POST",
+      "params": [
+        "search"
+      ],
+      "payload_kind": "svg_onload",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371072.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_post",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "POST",
+      "params": [
+        "search"
+      ],
+      "payload_kind": "attr_break_onfocus",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371073.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_post",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "POST",
+      "params": [
+        "search"
+      ],
+      "payload_kind": "script_break",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371073.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_post",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "POST",
+      "params": [
+        "message"
+      ],
+      "payload_kind": "img_onerror",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371074.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_post",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "POST",
+      "params": [
+        "message"
+      ],
+      "payload_kind": "svg_onload",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371074.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_post",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "POST",
+      "params": [
+        "message"
+      ],
+      "payload_kind": "attr_break_onfocus",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371075.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_post",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "POST",
+      "params": [
+        "message"
+      ],
+      "payload_kind": "script_break",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371075.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_post",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "POST",
+      "params": [
+        "username",
+        "password"
+      ],
+      "payload_kind": "img_onerror",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371076.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_post",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "POST",
+      "params": [
+        "username",
+        "password"
+      ],
+      "payload_kind": "svg_onload",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371076.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_post",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "POST",
+      "params": [
+        "username",
+        "password"
+      ],
+      "payload_kind": "attr_break_onfocus",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371077.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_post",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "POST",
+      "params": [
+        "username",
+        "password"
+      ],
+      "payload_kind": "script_break",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371077.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_post",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "POST",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "payload_kind": "img_onerror",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371078.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_post",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "POST",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "payload_kind": "svg_onload",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371078.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_post",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "POST",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "payload_kind": "attr_break_onfocus",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371079.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    },
+    {
+      "type": "reflected_post",
+      "url": "http://testphp.vulnweb.com/search.php",
+      "method": "POST",
+      "params": [
+        "uname",
+        "pass"
+      ],
+      "payload_kind": "script_break",
+      "status": 200,
+      "saved_file": "C:\\Users\\yassa\\Desktop\\backend-for-university-project--main\\scan_results\\resp_testphp.vulnweb.com_a3676990_1767371079.html",
+      "found_raw": false,
+      "found_escaped": false,
+      "context": null
+    }
+  ]
+}
