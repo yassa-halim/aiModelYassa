@@ -14,7 +14,7 @@
     "jsonwebtoken": "^9.0.3",
     "markdown-pdf": "^11.0.0",
     "marked": "^17.0.1",
-    "mongoose": "^9.1.1",
+    "mongoose": "^9.1.2",
     "multer": "^2.0.2",
     "node-cache": "^5.1.2",
     "nodemailer": "^7.0.12",

@@ -183,7 +183,7 @@ exports.scanAll = async (req, res) => {
     let finalSeverity = 'safe';
 
     resultsArray.forEach(item => {
-      if (item.isDetected) {
+      if (item.isDetected === true) {
         detectedCount++;
         const currentRank = SEVERITY_RANK[item.severity] || 0;
         if (currentRank > maxSeverityRank) {
@@ -216,7 +216,7 @@ exports.scanAll = async (req, res) => {
             totalVulnerabilities: detectedCount,
             highestSeverity: finalSeverity
         },
-        details: resultsArray,
+        details: resultsArray.filter(item => item.isDetected === true),
         aiReportContent: aiMarkdownContent
     });
 
