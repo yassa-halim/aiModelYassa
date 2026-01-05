@@ -16,18 +16,33 @@ exports.generateAndDownloadPDF = async (req, res) => {
         /* ===============================
            1️⃣ Load Scan + Authorization
            =============================== */
-        const scan = await ScanResult.findById(scanId).populate('url');
+        // const scan = await ScanResult.findById(scanId).populate('url');
 
-        if (!scan) {
-            return res.status(404).json({ message: 'Scan not found' });
-        }
+        // if (!scan) {
+        //     return res.status(404).json({ message: 'Scan not found' });
+        // }
 
-        // 🔐 Authorization (IDOR Protection)
-        if (scan.user && scan.user.toString() !== req.user.id) {
-            return res.status(403).json({
-                message: 'You are not authorized to access this report'
-            });
-        }
+        // // 🔐 Authorization (IDOR Protection)
+        // if (scan.user && scan.user.toString() !== req.user.id) {
+        //     return res.status(403).json({
+        //         message: 'You are not authorized to access this report'
+        //     });
+        // }
+
+
+        // داخل دالة generateAndDownloadPDF في reportController.js
+const scan = await ScanResult.findById(scanId).populate('url');
+
+if (!scan) {
+    return res.status(404).json({ message: 'Scan not found' });
+}
+
+// 🔐 الآن هذا الفحص سيعمل بشكل صحيح لأن الحقل أصبح موجوداً في الموديل
+if (scan.user && scan.user.toString() !== req.user.id) {
+    return res.status(403).json({
+        message: 'You are not authorized to access this report'
+    });
+}
 
         const targetUrl = scan.url?.originalUrl || 'Target Website';
 

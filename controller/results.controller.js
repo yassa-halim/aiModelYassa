@@ -260,26 +260,18 @@ exports.scanAll = async (req, res) => {
 
     // حفظ التقرير
     const newReport = new Report({
-        url: urlDoc._id,
-        summary: {
-            totalVulnerabilities: detectedCount,
-            highestSeverity: finalSeverity
-        },
-        details: resultsArray,
-
-
-
-        aiReportContent: aiMarkdownContent
-    });
-
-
-
-
-    //try  catch
-    await newReport.save();
-
-
-
+      url: urlDoc._id,
+      user: urlDoc.user._id, // 🔥 حفظ معرف المستخدم مباشرة في التقرير
+      summary: {
+          totalVulnerabilities: detectedCount,
+          highestSeverity: finalSeverity
+      },
+      details: resultsArray,
+      aiReportContent: aiMarkdownContent
+  });
+  
+  await newReport.save();
+  
 
     // --- PDF Generation Start ---
     try {
