@@ -1,0 +1,8 @@
+node_modules/
+scan_results/
+temp_payloads/
+logs/
+uploads/
+package-lock.json
+package.json
+.env
