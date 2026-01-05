@@ -29,8 +29,16 @@ const reportSchema = new mongoose.Schema({
             technicalDetail: Object // هنا نخزن مخرجات البايثون (اختياري)
         }
     ],
+
+
+
+
     aiReportContent: String,
     pdfFilename: String
+
+
+
+    
 }, { timestamps: true });
 
 
